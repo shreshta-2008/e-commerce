@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="login.css">
+
+<script>
+function validate(form){
+    var a1 = form.t1.value;
+    var a2 = form.pass1.value;
+
+    if (a1=="Shreshta"&&a2=="Siri1899"){
+        localStorage.setItem("loginUser",a1);
+        alert("Sucess!");
+        return true;
+    }
+    else{
+        alert("pls enter correct credentials");
+        return false;
+    }
+}
+</script>
+
+</head>
+<body>  
+<header>
+<h1>🛍️ MyShop</h1>
+</header>
+
+<section class="login-box">
+<h2>LOGIN DETAILS</h2>
+
+<form name="form1" method="post" action="index.html">
+
+Username:
+<input type="text" name="t1"><br><br>
+
+Password:
+<input type="password" name="pass1"><br><br>
+
+<input type="submit" value="Submit" onclick="return validate(this.form)">
+<input type="reset" value="Reset">
+
+</form>
+</section>
+
+<footer>
+<p>©2025 My Shop. All Rights Reserved</p>
+<p>Welcome to KL University</p>
+</footer>
+
+</body>
+</html>

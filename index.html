@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="user-display" style=" position: absolute;
+        right: 20px;
+        top: 20px;
+        font-weight: bold;">
+        </div>
+        <h1>🛍️ MyShop</h1>
+    <nav> 
+        <a href="index.html">Home</a>
+            <a href="index.1.html">Watches</a>
+            <a href="laptops.html">Laptops</a>
+            <a href="mobiles.html">Mobiles</a>
+            <a href="index2.html">Cart</a>
+    </nav>
+    </header>
+    <section class="middle">
+        <h2>Welcome to MyShop!</h2>
+        <p>Find the best deals on top products</p>
+        <a href="index.1.html" class="btn">Shop Me</a>
+    </section>
+    <center>
+    <section class="middle1">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>✓ High Quality Products</li>
+            <li>✓ Best Price Garantee</li>
+            <li>✓ Fast and Secure Delivery</li>
+            <li>✓ High Quality products</li>
+            <li>✓ 24/7 Customer Support</li>
+            <li>✓ Easy Returns and Refunds</li>
+        </ul>
+    </section>
+    </center>
+    <footer>
+        <p>©2025 My Shop.All Rights are Reserved</p>
+        <p> Welcome to KL University</p>
+    </footer>
+    <script>
+        let user=localStorage.getItem("loginUser");
+        if(user){
+            document.getElementById("user-display").innerText="Welcome,"+user;            
+        }
+    </script>
+</body>
+</html>

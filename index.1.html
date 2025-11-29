@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div id="user-display" style=" position: absolute;
+        right: 20px;
+        top: 20px;
+        font-weight: bold;">
+        </div>
+        <h1>🛍️ MyShop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.1.html">Watches</a>
+            <a href="laptops.html">Laptops</a>
+            <a href="mobiles.html">Mobiles</a>
+            <a href="index2.html">Cart</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <div class="products">
+            <div class="card">
+                <h3>Blackberry</h3>
+                <img src="watch1.png" width="150" height="150">
+                <div class="rating" aria-label="4.5 out of 5">★★★★☆</div>
+                <p class="price">₹320.00</p>
+<button onclick="addtocart('Blackberry Watch', 320)">Add to Cart</button>
+
+
+            </div>
+
+            <div class="card">
+                <h3>CASIO VINTAGE Men Diamond Digital Watch</h3>
+                <img src="watch 2.png" width="150" height="150">
+                <div class="rating" aria-label="4.5 out of 5">★★★★☆</div>
+                <p class="price">₹357.00</p>
+
+<button onclick="addtocart('CASIO VINTAGE Men Diamond Digital Watch', 357)">Add to Cart</button>
+
+
+            </div>
+
+            <div class="card">
+                <h3>TEAL by Chumbak Carnival Elephant Watch</h3>
+                <img src="watch 3.png" width="150" height="150">
+                <div class="rating" aria-label="4.5 out of 5">★★★★☆</div>
+                <p class="price">₹458.00</p>
+<button onclick="addtocart('Blackberry Watch', 320)">Add to Cart</button>
+
+
+            </div>
+        </div>
+    </main>
+     <footer>
+        <p>©2025 My Shop.All Rights are Reserved</p>
+        <p> Welcome to KL University</p>
+     
+    </footer>
+    <script src="script.js"></script>
+     <script>
+        let user=localStorage.getItem("loginUser");
+        if(user){
+            document.getElementById("user-display").innerText="Welcome,"+user;            
+        }
+    </script>
+</body>
+</html>

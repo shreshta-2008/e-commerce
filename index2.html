@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cart - MyShop</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<header>
+    <div id="user-display" style="position:absolute; right:20px; top:20px; font-weight:bold;"></div>
+    <h1>🛍️ MyShop</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.1.html">Watches</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="mobiles.html">Mobiles</a>
+        <a href="index2.html">Cart</a>
+    </nav>
+</header>
+
+<section class="cart-container">
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="total">Total:₹0.00</h3>
+    <button id="check-btn" onclick="checkout()">Checkout</button>
+    <button onclick="logoutNow()">Logout</button>
+</section>
+
+<script src="script.js"></script>
+<script>
+function checkout() {
+    if (!sessionStorage.getItem("isLoggedIn")) {
+        localStorage.setItem("redirectAfterLogin", window.location.href);
+        alert("Please login to checkout.");
+        window.location.href = "login.html";
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    if (!cart || cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+
+    // Simplified checkout: clear cart and show message
+    localStorage.removeItem("cart");
+    displayCart();
+    alert("Checkout successful! (This is a demo implementation.)");
+}
+</script>
+</body>
+</html>
